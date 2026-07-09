@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Electroplating CAD</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/viewer.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="container">
+
+            <a href="#" class="logo">
+                Electroplating CAD
+            </a>
+
+            <nav>
+
+                <!-- <a href="#overview">Overview</a> -->
+                <a href="#assembly">Assembly</a>
+                <a href="#parts">Parts</a>
+                <a href="#bill_of_materials">BoM</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#comments">Comments</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+
+        <section class="hero">
+
+            <div class="container hero-content">
+
+                <span class="eyebrow">
+                    Open Source CAD Project
+                </span>
+
+                <h1>
+                    Solar Prang
+                </h1>
+
+                <p>
+                    A custom solar-panel electroplating fixture designed to resemble a Buddhist Prang structure and bring "slow-tech" ambiance to your porch.
+                    Download the STL files or explore the assembly
+                    interactively in your browser.
+                </p>
+
+                <ul class="project-meta">
+
+                    <li>
+                        <span class="meta-label">Project Type</span>
+                        <span>Solar Decorative Fixture</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">CAD</span>
+                        <span>Autodesk Fusion</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">Visualization</span>
+                        <span>Three.js</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">Manufacturing</span>
+                        <span>FDM 3D Printing</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">Finishing</span>
+                        <span>Copper Electroplating</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">Author</span>
+                        <span>Rowan Lumb</span>
+                    </li>
+
+                    <li>
+                        <span class="meta-label">Status</span>
+
+                        <!-- <span class="status-complete">
+                            <span class="status-dot"></span>
+                            Complete
+                        </span> -->
+
+                        <span class="status-in-progress">
+                            <span class="status-dot-in-progress"></span>
+                            In Progress
+                        </span>
+                    </li>
+
+                </ul>
+
+                <div class="hero-buttons">
+
+                    <a href="models/Prang_Assembly.stl"
+                       download
+                       class="button primary">
+
+                        Download Assembly STL
+
+                    </a>
+
+                    <a
+                        class="button primary"
+                        href="assets/Solar_Prang_Bill_of_Materials.pdf"
+                        download>
+                        Download Bill of Materials
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Overview -->
+
+        <!-- <section id="overview" class="section">
+
+            <div class="container">
+
+                <h2>Overview</h2>
+
+                <p>
+
+                    This fixture consists of three printable components that
+                    assemble into a sturdy workholding solution for
+                    electroplating. The design emphasizes simplicity,
+                    durability, and ease of printing.
+
+                </p>
+
+            </div>
+
+        </section> -->
+
+
+        <!-- Assembly Viewer -->
+
+        <section id="assembly" class="section">
+
+            <div class="container part-container">
+
+                <h2>Assembly</h2>
+
+                <p>
+
+                    Rotate, zoom, and inspect the complete assembly directly
+                    in your browser.
+
+                </p>
+
+                <div id="assemblyViewer" class="viewer">
+
+                    <!-- Three.js renders here -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <br>
+
+
+        <section id="bill_of_materials" class="section">
+
+            <div class="container part-container">
+
+
+                <h2>Bill of Materials</h2>
+                
+
+                <div class="bom-wrapper collapsed">
+
+                    <article class="part-card">
+                        <div class="part-image-wrapper">
+
+                            <!-- Table here -->
+                             <table class="bom-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th>Preview</th>
+                                        <th>Item</th>
+                                        <th>Cost</th>
+                                        <th>Qty</th>
+
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/prang-top-section.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Prang Top Section">
+                                        </td>
+
+                                        <td>Prang Top Section (3D Printed ~9 hours)</td>
+                                        <td>~$1-$12</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/prang-middle-section.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Prang Middle Section">
+                                        </td>
+
+                                        <td>Prang Middle Section (3D Printed ~12 hours)</td>
+                                        <td>~$2-$15</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/prang-bottom-section.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Prang Bottom Section">
+                                        </td>
+
+                                        <td>Prang Bottom Section (3D Printed ~17 hours)</td>
+                                        <td>~$3-$20</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/prang_panel.jpg"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Solar Panel">
+                                        </td>
+                                        
+
+                                        <td>55 mm × 55 mm Solar Panel (DC)</td>
+                                        <td>$2.50</td>
+                                        <td>8</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Volt Gauge">
+                                        </td>
+
+                                        <td>Manual Volt Gauge</td>
+                                        <td>$2.50</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/amp_gauge.jpg"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Amp Gauge">
+                                        </td>
+
+                                        <td>Manual Amp Gauge</td>
+                                        <td>$2.50</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Conductive Graphite Paint">
+                                        </td>
+
+                                        <td>Conductive Graphite Paint</td>
+                                        <td>$15-$20</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/copper_sulfate.jpg"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Copper Sulfate">
+                                        </td>
+
+                                        <td>Copper Sulfate (200 g)</td>
+                                        <td>$7</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Distilled Water">
+                                        </td>
+
+                                        <td>Distilled Water (4 liters)</td>
+                                        <td>$5</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Battery Acid">
+                                        </td>
+
+                                        <td>Battery Acid (1 liter)</td>
+                                        <td>$1</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Copper Anode">
+                                        </td>
+
+                                        <td>Copper Anodes</td>
+                                        <td>$2.50</td>
+                                        <td>2-4</td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+                                            <img src="images/m3-nut.png"
+                                                class="bom-thumb lightbox-trigger"
+                                                alt="Lacquer Spray">
+                                        </td>
+
+                                        <td>Lacquer Spray</td>
+                                        <td>$2</td>
+                                        <td>1</td>
+
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+
+                                        <td><strong>Estimated Total (USD)</strong></td>
+                                        <td colspan="2"><strong>~$59–$105</strong></td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td></td>
+
+                                        <td><strong>Estimated Print Time</strong></td>
+                                        <td colspan="2"><strong>~38 hours</strong></td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+                            <p class="bom-note">
+                                *Costs are approximate and based on 2026 retail pricing in Thailand. Printing estimates assume either self-printing (material cost) or commercial print services. Prices for consumables such as conductive graphite paint and copper anodes reflect the initial purchase cost, as these materials can be reused across multiple projects.
+                            </p>
+
+                        </div>
+
+                        
+
+                    </article>
+
+                    
+
+                    <div class="bom-fade"></div>
+
+                </div>
+
+                <div class="bom-actions">
+                    <a id="bomToggle" class="button secondary">
+                        Show Full Bill of Materials
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Individual Parts -->
+         <br>
+
+        <section id="parts" class="section">
+
+            <div class="container part-container">
+
+                <h2>Individual Components</h2>
+
+                <div class="parts-grid">
+
+                    <article class="part-card">
+
+                        <h3>Prang Top Section</h3>
+
+                        <div class="part-image-wrapper">
+
+                            <img
+                                src="images/Prang_Top_Section.png"
+                                alt="Prang Top Section"
+                                class="part-image">
+
+                            <div class="image-overlay">
+
+                                <a
+                                    class="button primary"
+                                    href="models/Prang_Top_Section.stl"
+                                    download>
+                                    Download STL
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </article>
+
+                    <article class="part-card">
+
+                        <h3>Prang Middle Section</h3>
+
+                        <div class="part-image-wrapper">
+
+                            <img
+                                src="images/Prang_Middle_Section.png"
+                                alt="Prang Middle Section"
+                                class="part-image">
+
+                            <div class="image-overlay">
+
+                                <a
+                                    class="button primary"
+                                    href="models/Prang_Middle_Section.stl"
+                                    download>
+                                    Download STL
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </article>
+
+                    <article class="part-card">
+
+                        <h3>Prang Bottom Section</h3>
+
+                        <div class="part-image-wrapper">
+
+                            <img
+                                src="images/Prang_Bottom_Section.png"
+                                alt="Prang Bottom Section"
+                                class="part-image">
+
+                            <div class="image-overlay">
+
+                                <a
+                                    class="button primary"
+                                    href="models/Prang_Bottom_Section.stl"
+                                    download>
+                                    Download STL
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Gallery -->
+
+        <section id="gallery" class="section">
+
+            <div class="container part-container">
+
+                <h2>Gallery</h2>
+
+                <p>
+                    Explore concept renders, manufacturing progress, and the completed Solar Prang.
+                </p>
+
+                <div class="gallery-grid">
+
+                    <!-- Image -->
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="images/notes.jpg"
+                            data-full="images/notes.jpg"
+                            class="gallery-image lightbox-trigger"
+                            alt="Concept render"
+                            data-caption="Messy notes from early drafting">
+
+                    </figure>
+
+                    <!-- Image -->
+
+                    <figure class="gallery-item">
+
+                        <img
+                            src="images/test_inset.jpg"
+                            data-full="images/test_inset.jpg"
+                            class="gallery-image lightbox-trigger"
+                            alt="Completed assembly"
+                            data-caption="Testing inset for solar panels with various tolerances">
+
+                    </figure>
+
+                    <!-- Lazy-loaded video -->
+                    <figure class="gallery-item">
+
+                        <div
+                            class="video-placeholder"
+                            data-video="videos/3d_printing.mp4"
+                            data-caption="Prang top section being printed">
+
+                            <img src="images/3d_printing.jpg" alt="Video">
+
+                            <span class="play-button">▶</span>
+
+                        </div>
+
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Comments/Learnings -->
+        <br>
+        <br>
+
+        <section id="comments" class="section">
+
+            <div class="container part-container">
+
+                <h2>Comments & Lessons</h2>
+
+
+                <ul>
+                    <li>
+                        This fixture came out a bit stubbier than intended so could extend the bottom and middle sections probably another total 50mm or so to improve the overall look.
+                    </li>
+
+                    <li>
+                        Overall product would be improved by making it a warm light that turns on at night so the solar panels are doing useful work.
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="container">
+
+            &copy; <span id="currentYear"></span> RTL Software LLC
+
+        </div>
+
+    </footer>
+
+    <script src="js/app.js" type="module"></script>
+     <script type="importmap">
+        {
+        "imports": {
+            "three": "https://unpkg.com/three@0.180.0/build/three.module.js"
+        }
+        }
+    </script>
+    <script type="module" src="js/viewer.js"></script>
+
+
+    <div id="lightbox" class="lightbox">
+
+        <span class="lightbox-close">&times;</span>
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightboxImage"
+                class="lightbox-image"
+                src=""
+                alt="Expanded image">
+
+            <video
+                id="lightboxVideo"
+                class="lightbox-video"
+                controls
+                style="display:none;">
+            </video>
+
+            <div id="lightboxCaption" class="lightbox-caption"></div>
+
+        </div>
+
+    </div>
+    
+
+</body>
+
+</html>

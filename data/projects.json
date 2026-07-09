@@ -1,0 +1,10 @@
+[
+  {
+    "id": "solar-prang",
+    "title": "Copper Electro-Plated Solar Prang",
+    "description": "1 mm copper electroplating bus bar.",
+    "thumbnail": "models/solar_prang/thumbnail.webp",
+    "model": "models/solar_prang/busbar.glb",
+    "step": "models/solar_prang/busbar.step"
+  }
+]

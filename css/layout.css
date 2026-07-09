@@ -1,0 +1,201 @@
+.container {
+
+    width: min(1100px, 92%);
+    margin: auto;
+
+}
+
+.navbar {
+
+    padding: 22px 0;
+
+}
+
+.navbar .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 2rem;
+
+}
+
+.hero {
+
+    padding: 7rem 0;
+    text-align: center;
+
+}
+
+.hero h2 {
+
+    font-size: 3rem;
+    margin-bottom: 1rem;
+
+}
+
+.hero p {
+
+    max-width: 700px;
+
+    margin: auto auto 2rem;
+
+}
+
+.hero ul {
+    margin: auto auto 2rem;
+    max-width: 500px;
+}
+
+.projects {
+
+    padding: 4rem 0;
+
+}
+
+.card-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+
+    gap: 2rem;
+
+}
+
+
+.bom-layout {
+
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    align-items: start;
+
+}
+
+.bom-image-wrapper {
+
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+
+}
+
+.bom-image {
+
+    display: block;
+    width: 100%;
+    border-radius: var(--radius);
+
+}
+
+.bom-table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.bom-table th,
+.bom-table td {
+
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+
+}
+
+.bom-table th {
+
+    background: #f5f5f5;
+    color: black;
+
+}
+
+@media (max-width: 768px) {
+
+    .bom-layout {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+.bom-wrapper {
+
+    position: relative;
+    overflow: hidden;
+    transition: max-height .35s ease;
+
+}
+
+.bom-wrapper.collapsed {
+
+    max-height: 420px;
+
+}
+
+.bom-wrapper.expanded {
+
+    max-height: 5000px;
+
+}
+
+.bom-fade {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 90px;
+
+    background: linear-gradient(
+        rgba(255,255,255,0),
+        rgba(255,255,255,1)
+    );
+
+    pointer-events: none;
+
+    transition: opacity .3s;
+
+}
+
+.bom-wrapper.expanded .bom-fade {
+
+    opacity: 0;
+
+}
+
+.bom-actions {
+
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    margin-top: 1rem;
+
+}
+
+.bom-thumb {
+    display: block;
+    max-height: 100px;
+    margin: 0 auto;
+    cursor: zoom-in;
+    transition: transform .2s ease;
+}
+
+.bom-thumb:hover {
+    transform: scale(1.08);
+}
