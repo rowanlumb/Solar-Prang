@@ -199,3 +199,35 @@ nav {
 .bom-thumb:hover {
     transform: scale(1.08);
 }
+
+
+/* --- Responsive Display Utilities --- */
+
+/* Base state: Hidden everywhere by default if this class is applied */
+.d-none {
+    display: none !important;
+}
+
+/* Base state: Visible as flex on mobile */
+.d-flex {
+    display: flex !important;
+}
+
+/* Medium devices and up (Tablets/Desktops, 768px and wider) */
+@media (min-width: 768px) {
+    
+    /* Show as flex on desktop */
+    .d-md-flex {
+        display: flex !important;
+    }
+    
+    /* Show as standard block element on desktop */
+    .d-md-block {
+        display: block !important;
+    }
+    
+    /* Hide on desktop */
+    .d-md-none {
+        display: none !important;
+    }
+}

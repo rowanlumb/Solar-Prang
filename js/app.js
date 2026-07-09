@@ -97,3 +97,39 @@ document.addEventListener("keydown", e => {
     }
 
 });
+
+
+
+// Code for mobile to stop instant part download on click
+document.addEventListener('DOMContentLoaded', () => {
+    const wrappers = document.querySelectorAll('.part-image-wrapper');
+
+    wrappers.forEach(wrapper => {
+        wrapper.addEventListener('click', function(e) {
+            // Check if the user is using a touchscreen device
+            if (window.matchMedia('(pointer: coarse)').matches) {
+                
+                // If this card hasn't been tapped yet
+                if (!this.classList.contains('touch-active')) {
+                    // Stop the download from happening immediately
+                    e.preventDefault(); 
+                    
+                    // Close any other open cards so only one overlay shows at a time
+                    wrappers.forEach(w => w.classList.remove('touch-active'));
+                    
+                    // Trigger the CSS transitions safely
+                    this.classList.add('touch-active');
+                }
+                // If it IS already active, the browser handles the click normally 
+                // and the download starts on this second tap.
+            }
+        });
+    });
+
+    // Tap anywhere else on the screen to hide the overlay cleanly
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.part-image-wrapper')) {
+            wrappers.forEach(w => w.classList.remove('touch-active'));
+        }
+    });
+});

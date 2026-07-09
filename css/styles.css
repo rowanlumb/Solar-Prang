@@ -50,71 +50,50 @@ img {
 }
 
 .part-image-wrapper {
-
     position: relative;
-
     overflow: hidden;
-
     border-radius: var(--radius);
-
 }
 
 .part-image {
-
     display: block;
-
     width: 100%;
-
     object-fit: cover;
-
     transition: transform .3s ease;
-
 }
 
 .image-overlay {
-
     position: absolute;
-
     inset: 0;
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     background: rgba(0, 0, 0, 0.45);
-
     opacity: 0;
-
     transition: opacity .3s ease;
-
 }
 
-.part-image-wrapper:hover .image-overlay {
-
+/* --- Added .touch-active here --- */
+.part-image-wrapper:hover .image-overlay,
+.part-image-wrapper.touch-active .image-overlay {
     opacity: 1;
-
 }
 
-.part-image-wrapper:hover .part-image {
-
+/* --- Added .touch-active here --- */
+.part-image-wrapper:hover .part-image,
+.part-image-wrapper.touch-active .part-image {
     transform: scale(1.03);
-
 }
 
 .image-overlay .button {
-
     transform: translateY(10px);
-
     transition: transform .3s ease;
-
 }
 
-.part-image-wrapper:hover .button {
-
+/* --- Added .touch-active here --- */
+.part-image-wrapper:hover .button,
+.part-image-wrapper.touch-active .button {
     transform: translateY(0);
-
 }
 
 .part-card h3, .part-container h2 {
