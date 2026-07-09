@@ -231,3 +231,36 @@ footer {
     background: rgba(0,0,0,.25);
 
 }
+
+
+
+
+/* Responsive table */
+/* Container that handles the horizontal overflow */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth inertial scrolling on iOS */
+    margin-bottom: 1rem;
+}
+
+/* Force the scrollbar to be visible and styled on WebKit browsers (Chrome, Safari, iOS) */
+.table-responsive::-webkit-scrollbar {
+    height: 6px; /* Height of the horizontal scrollbar */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05); /* Subtle track background */
+    border-radius: var(--radius, 4px);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Darker thumb so it's clearly visible */
+    border-radius: var(--radius, 4px);
+}
+
+/* Standard properties for Firefox */
+.table-responsive {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.05);
+}
